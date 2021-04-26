@@ -1,0 +1,389 @@
+\hypertarget{carte_8c}{}\doxysection{Référence du fichier src/carte.c}
+\label{carte_8c}\index{src/carte.c@{src/carte.c}}
+
+
+toutes les fonctions des cartes  
+
+
+{\ttfamily \#include \char`\"{}carte.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de carte.\+c\+:
+% FIG 0
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{carte_8c_a6aa0d47381c86ccfee0df6882f216130}{inittab}} (struct \mbox{\hyperlink{structcarte}{carte}} $\ast$deck, int taille)
+\begin{DoxyCompactList}\small\item\em initialise le deck de carte \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{carte_8c_a7e7270743373ea8847fa65b058a5c97a}{initjeu}} (struct \mbox{\hyperlink{structjoueur}{joueur}} $\ast$jeu, int taille)
+\begin{DoxyCompactList}\small\item\em initialise le jeu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{carte_8c_ab8faa5fda8fdaa81b766ced9c3fa9ee6}{afficarte}} (struct \mbox{\hyperlink{structcarte}{carte}} lcarte)
+\begin{DoxyCompactList}\small\item\em affiche les valeurs de la carte \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{carte_8c_a227a5fb2d713bcacccc5c4fc276f906a}{valeur\+Carte}} (struct \mbox{\hyperlink{structjoueur}{joueur}} $\ast$jeu, struct \mbox{\hyperlink{structcarte}{carte}} $\ast$deck, int \mbox{\hyperlink{structjoueur}{joueur}}, int ou)
+\begin{DoxyCompactList}\small\item\em donne la valeur de la carte \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structjoueur}{joueur}} \mbox{\hyperlink{carte_8c_a0179c6da847b66c7f5dadc638101c0fb}{distrib}} (struct \mbox{\hyperlink{structjoueur}{joueur}} $\ast$jeu, struct \mbox{\hyperlink{structcarte}{carte}} $\ast$deck, int \mbox{\hyperlink{structjoueur}{joueur}}, int posc)
+\begin{DoxyCompactList}\small\item\em donne une carte a un joueur \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structcarte}{carte}} $\ast$ \mbox{\hyperlink{carte_8c_adc35d1a82b25dd53cd06b04c20eb6362}{melange}} (struct \mbox{\hyperlink{structcarte}{carte}} $\ast$deck, int taille)
+\begin{DoxyCompactList}\small\item\em melange le paquet de cartes \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{carte_8c_ab6df50f0ad717dcabd94d92ecec92890}{debutjeu}} (struct \mbox{\hyperlink{structjoueur}{joueur}} $\ast$jeu, struct \mbox{\hyperlink{structcarte}{carte}} $\ast$deck, int \mbox{\hyperlink{structjoueur}{joueur}})
+\begin{DoxyCompactList}\small\item\em fait le premier tour du black jack \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{carte_8c_a5f0f1b84347feea49d34a568a15f4e9d}{midjeu}} (struct \mbox{\hyperlink{structjoueur}{joueur}} $\ast$jeu, struct \mbox{\hyperlink{structcarte}{carte}} $\ast$deck, int \mbox{\hyperlink{structjoueur}{joueur}}, int pos)
+\begin{DoxyCompactList}\small\item\em fait la partie apres la premiere tournée de carte \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{carte_8c_a0187b652ff8e43457083ffef931f6936}{labanquetire}} (struct \mbox{\hyperlink{structjoueur}{joueur}} $\ast$jeu, struct \mbox{\hyperlink{structcarte}{carte}} $\ast$deck, int pos)
+\begin{DoxyCompactList}\small\item\em fait le jeu de la banque \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{carte_8c_a6391efe8f64ff56e8612ebb16254b70c}{affideb}} (struct \mbox{\hyperlink{structjoueur}{joueur}} $\ast$jeu, int \mbox{\hyperlink{structjoueur}{joueur}})
+\begin{DoxyCompactList}\small\item\em affiche le debut de la partie \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{carte_8c_a28e521b40af28584722c7f45076465cb}{resul}} (struct \mbox{\hyperlink{structjoueur}{joueur}} $\ast$jeu, int \mbox{\hyperlink{structjoueur}{joueur}})
+\begin{DoxyCompactList}\small\item\em fait le resultat des paris \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{carte_8c_a8414b87ced862a1449267784ad77bfd8}{BJ}} (int \mbox{\hyperlink{structjoueur}{joueur}})
+\begin{DoxyCompactList}\small\item\em fonction principal du blackjack \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+toutes les fonctions des cartes 
+
+\begin{DoxyAuthor}{Auteur}
+Hugo Pointereau \href{mailto:pointereau@eisti.eu}{\texttt{ pointereau@eisti.\+eu}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+15/12/2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{carte_8c_ab8faa5fda8fdaa81b766ced9c3fa9ee6}\label{carte_8c_ab8faa5fda8fdaa81b766ced9c3fa9ee6}} 
+\index{carte.c@{carte.c}!afficarte@{afficarte}}
+\index{afficarte@{afficarte}!carte.c@{carte.c}}
+\doxysubsubsection{\texorpdfstring{afficarte()}{afficarte()}}
+{\footnotesize\ttfamily void afficarte (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structcarte}{carte}}}]{lcarte }\end{DoxyParamCaption})}
+
+
+
+affiche les valeurs de la carte 
+
+\begin{DoxyAuthor}{Auteur}
+Hugo Pointereau \href{mailto:pointereau@eisti.eu}{\texttt{ pointereau@eisti.\+eu}} param lcarte\+: une carte 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+18/12/2020 
+\end{DoxyDate}
+\mbox{\Hypertarget{carte_8c_a6391efe8f64ff56e8612ebb16254b70c}\label{carte_8c_a6391efe8f64ff56e8612ebb16254b70c}} 
+\index{carte.c@{carte.c}!affideb@{affideb}}
+\index{affideb@{affideb}!carte.c@{carte.c}}
+\doxysubsubsection{\texorpdfstring{affideb()}{affideb()}}
+{\footnotesize\ttfamily void affideb (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structjoueur}{joueur}} $\ast$}]{jeu,  }\item[{int}]{joueur }\end{DoxyParamCaption})}
+
+
+
+affiche le debut de la partie 
+
+\begin{DoxyAuthor}{Auteur}
+Hugo Pointereau \href{mailto:pointereau@eisti.eu}{\texttt{ pointereau@eisti.\+eu}} 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Paramètres}
+{\em jeu} & le tableau de joueur \\
+\hline
+{\em joueur} & le nombre de joueur \\
+\hline
+{\em deck} & le paquet de carte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+18/12/2020 
+\end{DoxyDate}
+\mbox{\Hypertarget{carte_8c_a8414b87ced862a1449267784ad77bfd8}\label{carte_8c_a8414b87ced862a1449267784ad77bfd8}} 
+\index{carte.c@{carte.c}!BJ@{BJ}}
+\index{BJ@{BJ}!carte.c@{carte.c}}
+\doxysubsubsection{\texorpdfstring{BJ()}{BJ()}}
+{\footnotesize\ttfamily void BJ (\begin{DoxyParamCaption}\item[{int}]{joueur }\end{DoxyParamCaption})}
+
+
+
+fonction principal du blackjack 
+
+\begin{DoxyAuthor}{Auteur}
+Hugo Pointereau \href{mailto:pointereau@eisti.eu}{\texttt{ pointereau@eisti.\+eu}} 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Paramètres}
+{\em jeu} & le tableau de joueur \\
+\hline
+{\em joueur} & le nombre de joueur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+15/12/2020 
+\end{DoxyDate}
+\mbox{\Hypertarget{carte_8c_ab6df50f0ad717dcabd94d92ecec92890}\label{carte_8c_ab6df50f0ad717dcabd94d92ecec92890}} 
+\index{carte.c@{carte.c}!debutjeu@{debutjeu}}
+\index{debutjeu@{debutjeu}!carte.c@{carte.c}}
+\doxysubsubsection{\texorpdfstring{debutjeu()}{debutjeu()}}
+{\footnotesize\ttfamily int debutjeu (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structjoueur}{joueur}} $\ast$}]{jeu,  }\item[{struct \mbox{\hyperlink{structcarte}{carte}} $\ast$}]{deck,  }\item[{int}]{joueur }\end{DoxyParamCaption})}
+
+
+
+fait le premier tour du black jack 
+
+\begin{DoxyAuthor}{Auteur}
+Hugo Pointereau \href{mailto:pointereau@eisti.eu}{\texttt{ pointereau@eisti.\+eu}} 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Renvoie}
+la poition du curseur de carte 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Paramètres}
+{\em jeu} & le tableau de joueur \\
+\hline
+{\em joueur} & le nombre de joueur \\
+\hline
+{\em deck} & le paquet de carte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+18/12/2020 
+\end{DoxyDate}
+\mbox{\Hypertarget{carte_8c_a0179c6da847b66c7f5dadc638101c0fb}\label{carte_8c_a0179c6da847b66c7f5dadc638101c0fb}} 
+\index{carte.c@{carte.c}!distrib@{distrib}}
+\index{distrib@{distrib}!carte.c@{carte.c}}
+\doxysubsubsection{\texorpdfstring{distrib()}{distrib()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structjoueur}{joueur}} $\ast$ distrib (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structjoueur}{joueur}} $\ast$}]{jeu,  }\item[{struct \mbox{\hyperlink{structcarte}{carte}} $\ast$}]{deck,  }\item[{int}]{joueur,  }\item[{int}]{posc }\end{DoxyParamCaption})}
+
+
+
+donne une carte a un joueur 
+
+\begin{DoxyAuthor}{Auteur}
+Hugo Pointereau \href{mailto:pointereau@eisti.eu}{\texttt{ pointereau@eisti.\+eu}} 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Renvoie}
+retourne le jeu 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Paramètres}
+{\em posc} & la position des cartes dans le paquet de cartes \\
+\hline
+{\em jeu} & le tableau de joueur \\
+\hline
+{\em taille} & le nombre de joueur \\
+\hline
+{\em deck} & le paquet de carte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+18/12/2020 
+\end{DoxyDate}
+\mbox{\Hypertarget{carte_8c_a7e7270743373ea8847fa65b058a5c97a}\label{carte_8c_a7e7270743373ea8847fa65b058a5c97a}} 
+\index{carte.c@{carte.c}!initjeu@{initjeu}}
+\index{initjeu@{initjeu}!carte.c@{carte.c}}
+\doxysubsubsection{\texorpdfstring{initjeu()}{initjeu()}}
+{\footnotesize\ttfamily void initjeu (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structjoueur}{joueur}} $\ast$}]{jeu,  }\item[{int}]{taille }\end{DoxyParamCaption})}
+
+
+
+initialise le jeu 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em jeu} & le tableau de joueur \\
+\hline
+{\em taille} & la taille du tab \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Hugo Pointereau \href{mailto:pointereau@eisti.eu}{\texttt{ pointereau@eisti.\+eu}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+18/12/2020 
+\end{DoxyDate}
+\mbox{\Hypertarget{carte_8c_a6aa0d47381c86ccfee0df6882f216130}\label{carte_8c_a6aa0d47381c86ccfee0df6882f216130}} 
+\index{carte.c@{carte.c}!inittab@{inittab}}
+\index{inittab@{inittab}!carte.c@{carte.c}}
+\doxysubsubsection{\texorpdfstring{inittab()}{inittab()}}
+{\footnotesize\ttfamily void inittab (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structcarte}{carte}} $\ast$}]{deck,  }\item[{int}]{taille }\end{DoxyParamCaption})}
+
+
+
+initialise le deck de carte 
+
+\begin{DoxyAuthor}{Auteur}
+Hugo Pointereau \href{mailto:pointereau@eisti.eu}{\texttt{ pointereau@eisti.\+eu}} 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Paramètres}
+{\em deck} & le paquet de carte \\
+\hline
+{\em taill} & la taille du paquet de carte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+15/12/2020 
+\end{DoxyDate}
+\mbox{\Hypertarget{carte_8c_a0187b652ff8e43457083ffef931f6936}\label{carte_8c_a0187b652ff8e43457083ffef931f6936}} 
+\index{carte.c@{carte.c}!labanquetire@{labanquetire}}
+\index{labanquetire@{labanquetire}!carte.c@{carte.c}}
+\doxysubsubsection{\texorpdfstring{labanquetire()}{labanquetire()}}
+{\footnotesize\ttfamily void labanquetire (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structjoueur}{joueur}} $\ast$}]{jeu,  }\item[{struct \mbox{\hyperlink{structcarte}{carte}} $\ast$}]{deck,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+fait le jeu de la banque 
+
+\begin{DoxyAuthor}{Auteur}
+Hugo Pointereau \href{mailto:pointereau@eisti.eu}{\texttt{ pointereau@eisti.\+eu}} 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Paramètres}
+{\em jeu} & le tableau de joueur \\
+\hline
+{\em joueur} & le nombre de joueur \\
+\hline
+{\em deck} & le paquet de carte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+12/12/2020 
+\end{DoxyDate}
+\mbox{\Hypertarget{carte_8c_adc35d1a82b25dd53cd06b04c20eb6362}\label{carte_8c_adc35d1a82b25dd53cd06b04c20eb6362}} 
+\index{carte.c@{carte.c}!melange@{melange}}
+\index{melange@{melange}!carte.c@{carte.c}}
+\doxysubsubsection{\texorpdfstring{melange()}{melange()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcarte}{carte}} $\ast$ melange (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structcarte}{carte}} $\ast$}]{deck,  }\item[{int}]{taille }\end{DoxyParamCaption})}
+
+
+
+melange le paquet de cartes 
+
+\begin{DoxyAuthor}{Auteur}
+Hugo Pointereau \href{mailto:pointereau@eisti.eu}{\texttt{ pointereau@eisti.\+eu}} 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Paramètres}
+{\em jeu} & le tableau de joueur \\
+\hline
+{\em taille} & la taille du tab \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la structure des joueurs 
+\end{DoxyReturn}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+16/12/2020 
+\end{DoxyDate}
+\mbox{\Hypertarget{carte_8c_a5f0f1b84347feea49d34a568a15f4e9d}\label{carte_8c_a5f0f1b84347feea49d34a568a15f4e9d}} 
+\index{carte.c@{carte.c}!midjeu@{midjeu}}
+\index{midjeu@{midjeu}!carte.c@{carte.c}}
+\doxysubsubsection{\texorpdfstring{midjeu()}{midjeu()}}
+{\footnotesize\ttfamily int midjeu (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structjoueur}{joueur}} $\ast$}]{jeu,  }\item[{struct \mbox{\hyperlink{structcarte}{carte}} $\ast$}]{deck,  }\item[{int}]{joueur,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+fait la partie apres la premiere tournée de carte 
+
+\begin{DoxyAuthor}{Auteur}
+Hugo Pointereau \href{mailto:pointereau@eisti.eu}{\texttt{ pointereau@eisti.\+eu}} 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Paramètres}
+{\em posc} & la position des cartes dans le paquet de cartes \\
+\hline
+{\em jeu} & le tableau de joueur \\
+\hline
+{\em joueur} & le nombre de joueur \\
+\hline
+{\em deck} & le paquet de carte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la position du curseur de carte 
+\end{DoxyReturn}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+19/12/2020 
+\end{DoxyDate}
+\mbox{\Hypertarget{carte_8c_a28e521b40af28584722c7f45076465cb}\label{carte_8c_a28e521b40af28584722c7f45076465cb}} 
+\index{carte.c@{carte.c}!resul@{resul}}
+\index{resul@{resul}!carte.c@{carte.c}}
+\doxysubsubsection{\texorpdfstring{resul()}{resul()}}
+{\footnotesize\ttfamily void resul (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structjoueur}{joueur}} $\ast$}]{jeu,  }\item[{int}]{joueur }\end{DoxyParamCaption})}
+
+
+
+fait le resultat des paris 
+
+\begin{DoxyAuthor}{Auteur}
+Hugo Pointereau \href{mailto:pointereau@eisti.eu}{\texttt{ pointereau@eisti.\+eu}} 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Paramètres}
+{\em jeu} & le tableau de joueur \\
+\hline
+{\em joueur} & le nombre de joueur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+19/12/2020 
+\end{DoxyDate}
+\mbox{\Hypertarget{carte_8c_a227a5fb2d713bcacccc5c4fc276f906a}\label{carte_8c_a227a5fb2d713bcacccc5c4fc276f906a}} 
+\index{carte.c@{carte.c}!valeurCarte@{valeurCarte}}
+\index{valeurCarte@{valeurCarte}!carte.c@{carte.c}}
+\doxysubsubsection{\texorpdfstring{valeurCarte()}{valeurCarte()}}
+{\footnotesize\ttfamily int valeur\+Carte (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structjoueur}{joueur}} $\ast$}]{jeu,  }\item[{struct \mbox{\hyperlink{structcarte}{carte}} $\ast$}]{deck,  }\item[{int}]{joueur,  }\item[{int}]{ou }\end{DoxyParamCaption})}
+
+
+
+donne la valeur de la carte 
+
+\begin{DoxyAuthor}{Auteur}
+Hugo Pointereau \href{mailto:pointereau@eisti.eu}{\texttt{ pointereau@eisti.\+eu}} 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Paramètres}
+{\em ou} & la position des cartes dans le paquet de cartes \\
+\hline
+{\em jeu} & le tableau de joueur \\
+\hline
+{\em taille} & le nombre de joueur \\
+\hline
+{\em deck} & le paquet de carte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+19/12/2020 
+\end{DoxyDate}

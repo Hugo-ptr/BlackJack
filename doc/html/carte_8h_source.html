@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Mon BLAKCJACK:  Fichier source de src/carte.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Mon BLAKCJACK
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">carte.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="carte_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef CARTE_H_</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define CARTE_H_</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/* Inclusion des entêtes de librairies */</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Saisie_8h.html">Saisie.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">enum</span> couleur{pique,trefle,carreau,coeur};</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structcarte.html">   19</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcarte.html">carte</a>{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordtype">int</span> int_pos;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordtype">int</span> int_val;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">enum</span> couleur cart_coul;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structjoueur.html">   27</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structjoueur.html">joueur</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordtype">int</span> mise;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordtype">char</span>* nom;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">struct </span><a class="code" href="structcarte.html">carte</a>* <a class="code" href="main_8c.html#abf9e6b7e6f15df4b525a2e7705ba3089">main</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">int</span> valeur;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">int</span> nbcartes;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">int</span> etat;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">void</span> <a class="code" href="carte_8h.html#a6aa0d47381c86ccfee0df6882f216130">inittab</a>(<span class="keyword">struct</span> <a class="code" href="structcarte.html">carte</a>* deck, <span class="keywordtype">int</span> taille);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">void</span> <a class="code" href="carte_8h.html#a7e7270743373ea8847fa65b058a5c97a">initjeu</a>(<span class="keyword">struct</span> <a class="code" href="structjoueur.html">joueur</a>* jeu, <span class="keywordtype">int</span> taille);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">int</span> <a class="code" href="carte_8h.html#a227a5fb2d713bcacccc5c4fc276f906a">valeurCarte</a>(<span class="keyword">struct</span> <a class="code" href="structjoueur.html">joueur</a>* jeu, <span class="keyword">struct</span> <a class="code" href="structcarte.html">carte</a>* deck,<span class="keywordtype">int</span> <a class="code" href="structjoueur.html">joueur</a>,<span class="keywordtype">int</span> ou);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keywordtype">void</span> <a class="code" href="carte_8h.html#ab8faa5fda8fdaa81b766ced9c3fa9ee6">afficarte</a>(<span class="keyword">struct</span> <a class="code" href="structcarte.html">carte</a> lcarte);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">struct </span><a class="code" href="structjoueur.html">joueur</a> <a class="code" href="carte_8h.html#afd346689eed6194538d6c2e9be913373">distrib</a>(struct <a class="code" href="structjoueur.html">joueur</a>* jeu, <span class="keyword">struct </span><a class="code" href="structcarte.html">carte</a>* deck,<span class="keywordtype">int</span> <a class="code" href="structjoueur.html">joueur</a>, <span class="keywordtype">int</span> posc);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">struct </span><a class="code" href="structcarte.html">carte</a>* <a class="code" href="carte_8h.html#af2930d1cd932d5cee0b7edc02916061f">melange</a>(<span class="keyword">struct</span> <a class="code" href="structcarte.html">carte</a>* deck,<span class="keywordtype">int</span> taille);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keywordtype">int</span> <a class="code" href="carte_8h.html#ab6df50f0ad717dcabd94d92ecec92890">debutjeu</a>(<span class="keyword">struct</span> <a class="code" href="structjoueur.html">joueur</a>* jeu,<span class="keyword">struct</span> <a class="code" href="structcarte.html">carte</a>* deck, <span class="keywordtype">int</span> <a class="code" href="structjoueur.html">joueur</a>);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keywordtype">void</span> <a class="code" href="carte_8h.html#a6391efe8f64ff56e8612ebb16254b70c">affideb</a>(<span class="keyword">struct</span> <a class="code" href="structjoueur.html">joueur</a>* jeu,<span class="keywordtype">int</span> <a class="code" href="structjoueur.html">joueur</a>);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keywordtype">int</span> <a class="code" href="carte_8h.html#a5f0f1b84347feea49d34a568a15f4e9d">midjeu</a>(<span class="keyword">struct</span> <a class="code" href="structjoueur.html">joueur</a>* jeu,<span class="keyword">struct</span> <a class="code" href="structcarte.html">carte</a>* deck, <span class="keywordtype">int</span> <a class="code" href="structjoueur.html">joueur</a>,<span class="keywordtype">int</span> pos);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keywordtype">void</span> <a class="code" href="carte_8h.html#a0187b652ff8e43457083ffef931f6936">labanquetire</a>(<span class="keyword">struct</span> <a class="code" href="structjoueur.html">joueur</a>* jeu,<span class="keyword">struct</span> <a class="code" href="structcarte.html">carte</a>* deck,<span class="keywordtype">int</span> pos);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="keywordtype">void</span> <a class="code" href="carte_8h.html#a28e521b40af28584722c7f45076465cb">resul</a>(<span class="keyword">struct</span> <a class="code" href="structjoueur.html">joueur</a>* jeu,<span class="keywordtype">int</span> <a class="code" href="structjoueur.html">joueur</a>);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="keywordtype">void</span> <a class="code" href="carte_8h.html#a8414b87ced862a1449267784ad77bfd8">BJ</a>(<span class="keywordtype">int</span> <a class="code" href="structjoueur.html">joueur</a>);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astructcarte_html"><div class="ttname"><a href="structcarte.html">carte</a></div><div class="ttdef"><b>Definition:</b> carte.h:19</div></div>
+<div class="ttc" id="acarte_8h_html_a8414b87ced862a1449267784ad77bfd8"><div class="ttname"><a href="carte_8h.html#a8414b87ced862a1449267784ad77bfd8">BJ</a></div><div class="ttdeci">void BJ(int joueur)</div><div class="ttdoc">fonction principal du blackjack</div><div class="ttdef"><b>Definition:</b> carte.c:275</div></div>
+<div class="ttc" id="acarte_8h_html_ab6df50f0ad717dcabd94d92ecec92890"><div class="ttname"><a href="carte_8h.html#ab6df50f0ad717dcabd94d92ecec92890">debutjeu</a></div><div class="ttdeci">int debutjeu(struct joueur *jeu, struct carte *deck, int joueur)</div><div class="ttdoc">fait le premier tour du black jack</div><div class="ttdef"><b>Definition:</b> carte.c:167</div></div>
+<div class="ttc" id="acarte_8h_html_af2930d1cd932d5cee0b7edc02916061f"><div class="ttname"><a href="carte_8h.html#af2930d1cd932d5cee0b7edc02916061f">melange</a></div><div class="ttdeci">struct carte * melange(struct carte *deck, int taille)</div><div class="ttdoc">melange le paquet de cartes</div><div class="ttdef"><b>Definition:</b> carte.c:146</div></div>
+<div class="ttc" id="acarte_8h_html_a7e7270743373ea8847fa65b058a5c97a"><div class="ttname"><a href="carte_8h.html#a7e7270743373ea8847fa65b058a5c97a">initjeu</a></div><div class="ttdeci">void initjeu(struct joueur *jeu, int taille)</div><div class="ttdoc">initialise le jeu</div><div class="ttdef"><b>Definition:</b> carte.c:26</div></div>
+<div class="ttc" id="acarte_8h_html_a6aa0d47381c86ccfee0df6882f216130"><div class="ttname"><a href="carte_8h.html#a6aa0d47381c86ccfee0df6882f216130">inittab</a></div><div class="ttdeci">void inittab(struct carte *deck, int taille)</div><div class="ttdoc">initialise le deck de carte</div><div class="ttdef"><b>Definition:</b> carte.c:12</div></div>
+<div class="ttc" id="acarte_8h_html_a5f0f1b84347feea49d34a568a15f4e9d"><div class="ttname"><a href="carte_8h.html#a5f0f1b84347feea49d34a568a15f4e9d">midjeu</a></div><div class="ttdeci">int midjeu(struct joueur *jeu, struct carte *deck, int joueur, int pos)</div><div class="ttdoc">fait la partie apres la premiere tournée de carte</div><div class="ttdef"><b>Definition:</b> carte.c:188</div></div>
+<div class="ttc" id="amain_8c_html_abf9e6b7e6f15df4b525a2e7705ba3089"><div class="ttname"><a href="main_8c.html#abf9e6b7e6f15df4b525a2e7705ba3089">main</a></div><div class="ttdeci">int main(int argc, char const *argv[])</div><div class="ttdoc">Fonction principale.</div><div class="ttdef"><b>Definition:</b> main.c:25</div></div>
+<div class="ttc" id="acarte_8h_html_afd346689eed6194538d6c2e9be913373"><div class="ttname"><a href="carte_8h.html#afd346689eed6194538d6c2e9be913373">distrib</a></div><div class="ttdeci">struct joueur distrib(struct joueur *jeu, struct carte *deck, int joueur, int posc)</div><div class="ttdoc">donne une carte a un joueur</div><div class="ttdef"><b>Definition:</b> carte.c:136</div></div>
+<div class="ttc" id="aSaisie_8h_html"><div class="ttname"><a href="Saisie_8h.html">Saisie.h</a></div><div class="ttdoc">Toutes les fonctions liées à la saisie.</div></div>
+<div class="ttc" id="acarte_8h_html_a0187b652ff8e43457083ffef931f6936"><div class="ttname"><a href="carte_8h.html#a0187b652ff8e43457083ffef931f6936">labanquetire</a></div><div class="ttdeci">void labanquetire(struct joueur *jeu, struct carte *deck, int pos)</div><div class="ttdoc">fait le jeu de la banque</div><div class="ttdef"><b>Definition:</b> carte.c:216</div></div>
+<div class="ttc" id="acarte_8h_html_a6391efe8f64ff56e8612ebb16254b70c"><div class="ttname"><a href="carte_8h.html#a6391efe8f64ff56e8612ebb16254b70c">affideb</a></div><div class="ttdeci">void affideb(struct joueur *jeu, int joueur)</div><div class="ttdoc">affiche le debut de la partie</div><div class="ttdef"><b>Definition:</b> carte.c:229</div></div>
+<div class="ttc" id="astructjoueur_html"><div class="ttname"><a href="structjoueur.html">joueur</a></div><div class="ttdef"><b>Definition:</b> carte.h:27</div></div>
+<div class="ttc" id="acarte_8h_html_ab8faa5fda8fdaa81b766ced9c3fa9ee6"><div class="ttname"><a href="carte_8h.html#ab8faa5fda8fdaa81b766ced9c3fa9ee6">afficarte</a></div><div class="ttdeci">void afficarte(struct carte lcarte)</div><div class="ttdoc">affiche les valeurs de la carte</div><div class="ttdef"><b>Definition:</b> carte.c:44</div></div>
+<div class="ttc" id="acarte_8h_html_a28e521b40af28584722c7f45076465cb"><div class="ttname"><a href="carte_8h.html#a28e521b40af28584722c7f45076465cb">resul</a></div><div class="ttdeci">void resul(struct joueur *jeu, int joueur)</div><div class="ttdoc">fait le resultat des paris</div><div class="ttdef"><b>Definition:</b> carte.c:244</div></div>
+<div class="ttc" id="acarte_8h_html_a227a5fb2d713bcacccc5c4fc276f906a"><div class="ttname"><a href="carte_8h.html#a227a5fb2d713bcacccc5c4fc276f906a">valeurCarte</a></div><div class="ttdeci">int valeurCarte(struct joueur *jeu, struct carte *deck, int joueur, int ou)</div><div class="ttdoc">donne la valeur de la carte</div><div class="ttdef"><b>Definition:</b> carte.c:105</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

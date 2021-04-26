@@ -1,0 +1,159 @@
+\hypertarget{saisie_8c}{}\doxysection{Référence du fichier src/saisie.c}
+\label{saisie_8c}\index{src/saisie.c@{src/saisie.c}}
+
+
+fonctions de saisie  
+
+
+{\ttfamily \#include \char`\"{}Saisie.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de saisie.\+c\+:
+% FIG 0
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{saisie_8c_ac9e8ea279c4cb2682339c8c4d11d1665}{Saisie\+Entier}} ()
+\begin{DoxyCompactList}\small\item\em Saisie un entier valide. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{saisie_8c_a16b31e5a4b414ca806f4f63e054d14a3}{Saisie\+Reel}} ()
+\begin{DoxyCompactList}\small\item\em Saisie d\textquotesingle{}un réel. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{saisie_8c_a20af0e4fd49d5fe290a52961f95e616f}{Choix\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em vérifie le choix du menu \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{saisie_8c_af78a599945911e2a8fe80a508c522d49}{Inter\+Reel}} (int int\+\_\+min, int int\+\_\+max)
+\begin{DoxyCompactList}\small\item\em boucle pour avoir une valeur dans un interval \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{saisie_8c_ad04524a595f730b5ec7cc10a6760312a}{Remptabdyn}} (int int\+\_\+taille, int $\ast$pint\+\_\+tab)
+\begin{DoxyCompactList}\small\item\em fonction qui demande les valeurs du tab \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+fonctions de saisie 
+
+\begin{DoxyAuthor}{Auteur}
+Hugo Pointereau \href{mailto:pointereau@eisti.eu}{\texttt{ pointereau@eisti.\+eu}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+30/10/2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{saisie_8c_a20af0e4fd49d5fe290a52961f95e616f}\label{saisie_8c_a20af0e4fd49d5fe290a52961f95e616f}} 
+\index{saisie.c@{saisie.c}!ChoixMenu@{ChoixMenu}}
+\index{ChoixMenu@{ChoixMenu}!saisie.c@{saisie.c}}
+\doxysubsubsection{\texorpdfstring{ChoixMenu()}{ChoixMenu()}}
+{\footnotesize\ttfamily int Choix\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+vérifie le choix du menu 
+
+\begin{DoxyAuthor}{Auteur}
+Hugo Pointereau \href{mailto:pointereau@eisti.eu}{\texttt{ pointereau@eisti.\+eu}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyReturn}{Renvoie}
+retourne le choix pour le menu 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+20/11/2020 
+\end{DoxyDate}
+\mbox{\Hypertarget{saisie_8c_af78a599945911e2a8fe80a508c522d49}\label{saisie_8c_af78a599945911e2a8fe80a508c522d49}} 
+\index{saisie.c@{saisie.c}!InterReel@{InterReel}}
+\index{InterReel@{InterReel}!saisie.c@{saisie.c}}
+\doxysubsubsection{\texorpdfstring{InterReel()}{InterReel()}}
+{\footnotesize\ttfamily int Inter\+Reel (\begin{DoxyParamCaption}\item[{int}]{int\+\_\+min,  }\item[{int}]{int\+\_\+max }\end{DoxyParamCaption})}
+
+
+
+boucle pour avoir une valeur dans un interval 
+
+\begin{DoxyAuthor}{Auteur}
+Hugo Pointereau \href{mailto:pointereau@eisti.eu}{\texttt{ pointereau@eisti.\+eu}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Paramètres}
+{\em minimun} & pour l\textquotesingle{}interval \\
+\hline
+{\em maximun} & pour l\textquotesingle{}interval \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+retourne un entier dans un interval 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+20/11/2020 
+\end{DoxyDate}
+\mbox{\Hypertarget{saisie_8c_ad04524a595f730b5ec7cc10a6760312a}\label{saisie_8c_ad04524a595f730b5ec7cc10a6760312a}} 
+\index{saisie.c@{saisie.c}!Remptabdyn@{Remptabdyn}}
+\index{Remptabdyn@{Remptabdyn}!saisie.c@{saisie.c}}
+\doxysubsubsection{\texorpdfstring{Remptabdyn()}{Remptabdyn()}}
+{\footnotesize\ttfamily void Remptabdyn (\begin{DoxyParamCaption}\item[{int}]{int\+\_\+taille,  }\item[{int $\ast$}]{pint\+\_\+tab }\end{DoxyParamCaption})}
+
+
+
+fonction qui demande les valeurs du tab 
+
+\begin{DoxyAuthor}{Auteur}
+Hugo Pointereau \href{mailto:pointereau@eisti.eu}{\texttt{ pointereau@eisti.\+eu}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 \textbackslash{}parem la taille du tableau 
+\end{DoxyVersion}
+
+\begin{DoxyParams}{Paramètres}
+{\em un} & tableau dynamique \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+28/11/2020 
+\end{DoxyDate}
+\mbox{\Hypertarget{saisie_8c_ac9e8ea279c4cb2682339c8c4d11d1665}\label{saisie_8c_ac9e8ea279c4cb2682339c8c4d11d1665}} 
+\index{saisie.c@{saisie.c}!SaisieEntier@{SaisieEntier}}
+\index{SaisieEntier@{SaisieEntier}!saisie.c@{saisie.c}}
+\doxysubsubsection{\texorpdfstring{SaisieEntier()}{SaisieEntier()}}
+{\footnotesize\ttfamily int Saisie\+Entier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Saisie un entier valide. 
+
+\begin{DoxyAuthor}{Auteur}
+Hugo Pointereau \href{mailto:pointereau@eisti.eu}{\texttt{ pointereau@eisti.\+eu}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyReturn}{Renvoie}
+retourne un entier 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+30/10/2020 
+\end{DoxyDate}
+\mbox{\Hypertarget{saisie_8c_a16b31e5a4b414ca806f4f63e054d14a3}\label{saisie_8c_a16b31e5a4b414ca806f4f63e054d14a3}} 
+\index{saisie.c@{saisie.c}!SaisieReel@{SaisieReel}}
+\index{SaisieReel@{SaisieReel}!saisie.c@{saisie.c}}
+\doxysubsubsection{\texorpdfstring{SaisieReel()}{SaisieReel()}}
+{\footnotesize\ttfamily float Saisie\+Reel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Saisie d\textquotesingle{}un réel. 
+
+\begin{DoxyAuthor}{Auteur}
+Hugo Pointereau \href{mailto:pointereau@eisti.eu}{\texttt{ pointereau@eisti.\+eu}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyReturn}{Renvoie}
+ertourne un float 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+30/10/2020 
+\end{DoxyDate}
